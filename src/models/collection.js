@@ -13,11 +13,13 @@ class collection {
   }
   
   read(_id) {
-    if (_id) {
-      return this.model.findOne({_id});
-    } else {
-      return this.model.find({});
-    }
+    return _id ? this.model.findOne({_id}) : this.model.find({});
+      
+    // if (_id) {
+    //   return this.model.findOne({_id});
+    // } else {
+    //   return this.model.find({});
+    // }
   }
 
   update(_id, record) {
