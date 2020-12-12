@@ -4,6 +4,11 @@
 
 ### Author: Nathan Cox
 
+### Contributors
+
+- Classmates: Dina Ayoub
+- Code Fellows TAs: 
+
 ### Links and Resources
 
 - [CI/CD](LINK)
