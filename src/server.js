@@ -26,7 +26,7 @@ module.exports = {
   server: app,
   start: port => {
     if (!port) { throw new Error('Where\'s the port?'); };
-    app.listen(port, () => console.log(`Order up on ${port}!`)
-    .catch(err => console.error('Server failed to start.', err);
+    app.listen(port, () => console.log(`Order up on ${port}!`))
+    .catch(err => console.error('Server failed to start.', err))
   }
 }
