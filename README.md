@@ -1,4 +1,4 @@
-#  LAB - Class 03
+# LAB - Class 03
 
 ## Project: api-server (mongoDB)
 
@@ -7,13 +7,13 @@
 ### Contributors
 
 - Classmates: Dina Ayoub
-- Code Fellows TAs: 
+- Code Fellows TAs:
 
 ### Links and Resources
 
 - [CI/CD](LINK)
 <!-- - [Back-end Server URL](http://xyz.com) (when applicable) -->
-- [Front-end Application](LINK)
+- [Heroku-deployed](https://nrc-api-server.herokuapp.com/)
 
 ### Setup
 

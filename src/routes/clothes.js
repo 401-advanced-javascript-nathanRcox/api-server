@@ -7,6 +7,11 @@ const Clothes = require('../models/collection');
 const clothesInstance = new Clothes(clothesModel);
 const validator = require('../middleware/validator');
 
+router.get('/', (req, res) => {
+  res.status(200).send('Howdy, Pardner');
+});
+
+
 //RESTful routes
 router.post('/clothes', createClothes);
 router.get('/clothes', getClothes);
