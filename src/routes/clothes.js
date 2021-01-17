@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 //RESTful routes
 router.post('/clothes', createClothes);
 router.get('/clothes', getClothes);
-router.get('clothes/:id', validator, getOneItemOfClothes)
+router.get('/clothes/:id', validator, getOneItemOfClothes)
 router.put('/clothes/:id', validator, updateClothes);
 router.delete('/clothes/:id', validator, deleteClothes);
 
@@ -25,6 +25,7 @@ async function getClothes(req, res) {
 }
 
 async function getOneItemOfClothes(req, res) {
+  console.log('REQ.PARAMS.ID:', req.params.id);
   res.status(200).json(await clothesInstance.read(req.params.id));
 }
 
