@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 
 // Middleware
+const cors = require('cors');
 const logger = require('./middleware/logger');
 const notFoundHandler = require('./error-handlers/404');
 const serverError = require('./error-handlers/500');
@@ -17,6 +18,7 @@ mongoose.connect(process.env.MONGOOSE_URI, options);
 app.use(express.json());
 app.use(logger);
 app.use(routeClothes);
+app.use(cors());
 //app.use(routeTwo);
 
 app.use('*', notFoundHandler);
