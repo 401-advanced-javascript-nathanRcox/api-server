@@ -20,6 +20,7 @@
   "homepage": "https://github.com/401-advanced-javascript-nathanRcox/api-server#readme",
   "dependencies": {
     "@code-fellows/supergoose": "^1.0.11",
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

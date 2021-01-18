@@ -4,6 +4,8 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 app.use(cors());
+// const parser = require('body-parser');
+// const urlencodedParser = parser.urlencoded({extended : false});
 
 // Middleware
 const logger = require('./middleware/logger');
@@ -17,17 +19,20 @@ const options = { useNewUrlParser: true, useUnifiedTopology: true }
 mongoose.connect(process.env.MONGOOSE_URI, options);
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+// app.use(parser .json());
+// app.use(urlencodedParser) 
 app.use(logger);
 app.use(routeClothes);
 //app.use(routeTwo);
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", '*');
-  res.header("Access-Control-Allow-Credentials", true);
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-  res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
-  next();
-});
+// app.use(function(req, res, next) {
+//   res.header("Access-Control-Allow-Origin", '*');
+//   res.header("Access-Control-Allow-Credentials", true);
+//   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+//   res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
+//   next();
+// });
 
 app.use('*', notFoundHandler);
 app.use(serverError);
