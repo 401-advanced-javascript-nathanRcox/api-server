@@ -12,7 +12,7 @@ const logger = require('./middleware/logger');
 const notFoundHandler = require('./error-handlers/404');
 const serverError = require('./error-handlers/500');
 const routeClothes = require('./routes/clothes');
-//const routeTwo
+const routeTodo = require('./routes/todo');
 
 const mongoose = require('mongoose');
 const options = { useNewUrlParser: true, useUnifiedTopology: true }
@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 // app.use(urlencodedParser) 
 app.use(logger);
 app.use(routeClothes);
-//app.use(routeTwo);
+app.use(routeTodo);
 
 // app.use(function(req, res, next) {
 //   res.header("Access-Control-Allow-Origin", '*');
